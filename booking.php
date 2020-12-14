@@ -23,7 +23,7 @@
                     <input type="password" name="pass" id="pass" class="form-control">
 
                     <label for="pass">Дата</label>
-                    <input type="password" name="pass" id="pass" class="form-control">
+                    <input type="date" name="pass" id="pass" class="form-control">
 
                     <div class="aletr alert-danger mt-3" id="errorBlock"></div>
 
