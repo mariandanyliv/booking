@@ -8,7 +8,6 @@
 </head>
 <body>
     <?php require 'blocks/header.php' ?>
-    <
 <div class="intro" id="intro">
     <div class="container">
         <div class="intro__inner">
@@ -30,12 +29,13 @@
             <div class="col-4">
                 <div class="portfolio-item">
                     <div class="portfolio-item__img">
-                        <img src="/img/Kyiv.jpg"
+                        <img src="/img/split.jpg"
                             alt="Kyiv">
                     </div>
                     <div class="portfolio-item__title">
-                        <a href="work-organika.html">Київ</a>
+                        <a href="work-organika.html">Split</a>
                     </div>
+                    <div  type="button" id="auth_user" class="btn btn-success mt-2">Забронювати</div>
                 </div>
             </div>
 
@@ -47,6 +47,7 @@
                     <div class="portfolio-item__title">
                         <a href="work-apollo.html">Львів</a>
                     </div>
+                    <div  type="button" id="auth_user" class="btn btn-success mt-2">Забронювати</div>
                 </div>
             </div>
     
@@ -59,6 +60,7 @@
                 <div class="portfolio-item__title">
                     <a href="work-portfolio.html">Харків</a>
                 </div>
+                <div  type="button" id="auth_user" class="btn btn-success mt-2">Забронювати</div>
             </div>
         </div>
       </div>

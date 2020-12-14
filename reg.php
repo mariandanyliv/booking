@@ -54,7 +54,7 @@
                     if (data == 'Готово') {
                     $('#reg_user').text('Все готово');
                     $('#errorBlock').hide();
-                    document.location.reload(true);
+                    document.location.replace('./auth.php');
                     } else {
                         $('#errorBlock').show();
                         $('#errorBlock').text(data);

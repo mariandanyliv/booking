@@ -29,5 +29,6 @@
     $query = $pdo->prepare($sql);
     $query->execute([$username, $email, $login, $pass]);
 
-    echo 'Готово'
+    setcookie('log', $login, time() + 3600 * 24 * 30, "/");
+    echo 'Готово';
 ?>
