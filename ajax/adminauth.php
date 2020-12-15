@@ -25,7 +25,7 @@
 
     $admins = $query->fetch(PDO::FETCH_OBJ);
     if($admins->adminid == 0){
-            setcookie('log', $login, time() + 3600 * 24 * 30, "/");
+            setcookie('admin', $login, time() + 3600 * 24 * 30, "/");
             echo 'Готово';
         }
 
