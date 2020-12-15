@@ -32,6 +32,28 @@
                 else:
             ?>
             <h2><?=$_COOKIE['log']?></h2>
+            <form action="" method="post">
+
+                <label for="login">Назва ресторану</label>
+                <input type="text" name="restoranName" id="restoranName" class="form-control">
+
+                <label for="pass">фото ресторану</label>
+                <input type="password" name="img" id="img" class="form-control">
+                
+                <label for="pass">score</label>
+                <input type="password" name="score" id="score" class="form-control">
+
+                <label for="pass">Пароль</label>
+                <input type="password" name="pass" id="pass" class="form-control">
+
+                <div class="aletr alert-danger mt-3" id="errorBlock"></div>
+
+                <button type="button" id="adminauth_user" class="btn btn-success mt-5">Ввійти</button>
+
+            </form>
+            <button type="button" id="add_restoran" class="btn btn-success mt-5">Додати</button>
+            <button type="button" class="btn btn-success mt-5">Ввійти</button>
+
             <button class="btn btn-danger" id="exit_btn">Вийти</button>
             <?php
                 endif;

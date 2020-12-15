@@ -42,9 +42,13 @@
 
         <footer class="footer mt-auto py-3">
   <div class="container">
+      <?php if ($_COOKIE['log']==''): ?>
     <span class="text-muted"><a href="./adminauth.php">Увійти як адміністратор</a></span>
   </div>
+      <?php else: ?>
+        <?php require 'blocks/footer.php'?>
 </footer>
+      <?php endif; ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <script>
