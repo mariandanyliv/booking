@@ -1,0 +1,62 @@
+.accordion {
+    padding: 30px 20px 10px 20px;
+}
+.accordion .card {
+    border-radius: 6px !important;
+    border: 1px solid #eceded !important;
+    margin-bottom: 5px;
+}
+.accordion .card .card-header {
+    background: #f9fafa;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-bottom: 0;
+    font-family: "Roboto", sans-serif;
+    border-radius: 6px 6px 0 0;
+    border-bottom: none;
+}
+.accordion .card-header:hover {
+    background: #ecf0f0;
+}
+.accordion .card-header h2 span {
+    float: left;
+    margin-top: 10px;
+}
+.accordion .card-header .btn {
+    color: black;
+    font-size: 1.04rem;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    top: -2px;
+    font-weight: 500;
+}
+.accordion .card-header i {
+    float: right;
+    font-size: 1.3rem;
+    font-weight: bold;
+    position: relative;
+    top: 5px;
+}
+.accordion .card-header .btn:hover {
+    color: black;
+}
+
+.page-title {
+    text-align: center;
+    margin: 2rem 0;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+}
+.page-title::after {
+    content: "";
+    width: 100px;
+    position: absolute;
+    margin: 0 auto;
+    height: 4px;
+    border-radius: 1px;
+    background: rgba(159, 162, 162, 0.8);
+    left: 0;
+    right: 0;
+    bottom: -15px;
+}

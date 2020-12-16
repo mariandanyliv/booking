@@ -7,7 +7,7 @@
     ?>
 </head>
 <body>
-<?php require 'blocks/header.php' ?>
+<?php require 'blocks/admin.php' ?>
 
 <div class="container mt-5">
     <div class="row">
@@ -92,7 +92,10 @@
 
             </form>
 
+                    <?php  require 'tabladmin.php' ?>
+
             <button type="button" class="btn btn-danger" id="exit_btn">Вийти</button>
+            
             <?php
                 endif;
             ?>

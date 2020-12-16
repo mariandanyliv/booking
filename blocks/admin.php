@@ -5,6 +5,6 @@
   <a class="btn btn-outline-primary mr-2 mb-2" href="/auth.php">Увійти</a>
   <a class="btn btn-outline-primary mb-2" href="/reg.php">Реєстрація</a>
   <?php else: ?>
-  <a class="btn btn-outline-primary mr-2 mb-2" href="./adminauth.php">Профіль</a>
+  <a class="btn btn-outline-primary mr-2 mb-2" href="./adminauth.php">Адмін панель</a>
   <?php endif; ?>
 </div>
