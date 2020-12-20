@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 <?php
         $website_title = "Авторизація на сайті";
         require 'blocks/head.php';
-    ?>
+?>
       
 <body>
 <?php require 'blocks/admin.php' ?>
@@ -15,7 +14,7 @@
             <?php
                 if ($_COOKIE['admin'] ==''):
             ?>
-            <h4>Авторизація</h4>
+            <h4>Авторизація адміна</h4>
             <form action="" method="post">
 
                 <label for="login">Логін</label>
@@ -97,6 +96,15 @@
                 <button type="button" id="upd_restoran" class="btn btn-success mt-5">Редагувати</button>
 
             </form>
+                <form action="" method="post">
+                <h4>Скасувати замовлення</h4>
+                    <label for="BookingID">Введіть номер замовлення, яке хочете скасувати</label>
+                    <input type="number" name="BookingID" id="BookingID" class="form-control">
+
+                    <div class="aletr alert-danger mt-3" id="errorBlock"></div>
+                    <button class="btn btn-success mb-5" id="delete_booking">Видалити</button>
+
+                 </form>           
 
                     <?php  require 'tabladmin.php' ?>
 
@@ -239,6 +247,29 @@
                 }
             });
         });
+
+        $('#delete_booking').click(function() {
+            var BookingID = $('#BookingID').val();
+            
+            $.ajax({
+                url: 'ajax/deletebooking.php',
+                type: 'POST',
+                cache: false,
+                data: {'BookingID': BookingID},
+                dataType: 'html',
+                success: function(data) {
+                    if (data == true) {
+                    $('#delete_booking').text('Готово');
+                    $('#errorBlocks').hide();
+                    document.location.reload(true);
+                    } else {
+                        $('#errorBlocks').show();
+                        $('#errorBlocks').text(data);
+                    }
+                }
+            });
+        });
+    </script>
     </script>
 
 <?php require 'blocks/footer.php' ?>

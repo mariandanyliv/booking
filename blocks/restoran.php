@@ -26,25 +26,44 @@
 
             $query = $pdo->query('SELECT * FROM restoran');
 
-            require 'head.php';
-
             while($rowing = $query->fetch(PDO::FETCH_OBJ)) {
-            echo '<div class="row">
-                <div class="col-4">
-                <div class="portfolio-item">
-                    <div class="portfolio-item__img">
-                        <img src="' . $rowing->img . '"alt="Split">
+                if ($_COOKIE['user']=='')
+                {
+                    echo '<div class="row">
+                    <div class="col-4">
+                    <div class="portfolio-item">
+                        <div class="portfolio-item__img">
+                            <img src="' . $rowing->img . '"alt="Split">
+                        </div>
+                        <div class="portfolio-item__title">
+                            <a href="#">' . $rowing->nameRestoran . '</a>
+                        </div>
+                        <div class="portfolio-item__title">
+                        <a href="#">Рейтинг:' . $rowing->score . '</a>
                     </div>
-                    <div class="portfolio-item__title">
-                        <a href="#">' . $rowing->nameRestoran . '</a>
+                       
+                       <a type="button" id="booking" class="btn btn-success mt-2" href="../auth.php">Забронювати</a>
                     </div>
-                    <div class="portfolio-item__title">
-                    <a href="#">Рейтинг:' . $rowing->score . '</a>
-                </div>
-                   
-                   <a type="button" id="booking" class="btn btn-success mt-2" href="../formbooking.php">Забронювати</a>
-                </div>
-            </div>';
+                </div>';
+                } else {
+                    echo '<div class="row">
+                    <div class="col-4">
+                    <div class="portfolio-item">
+                        <div class="portfolio-item__img">
+                            <img src="' . $rowing->img . '"alt="Split">
+                        </div>
+                        <div class="portfolio-item__title">
+                            <a href="#">' . $rowing->nameRestoran . '</a>
+                        </div>
+                        <div class="portfolio-item__title">
+                        <a href="#">Рейтинг:' . $rowing->score . '</a>
+                    </div>
+                       
+                       <a type="button" id="booking" class="btn btn-success mt-2" href="../formbooking.php">Забронювати</a>
+                    </div>
+                </div>';
+                }
+           
         }
         ?>
 

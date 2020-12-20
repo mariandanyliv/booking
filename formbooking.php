@@ -8,15 +8,15 @@
 </head>
 <body>
 <?php 
-        if ($_COOKIE['log']=='' && $_COOKIE['admin']=='') {
+        if ($_COOKIE['user']=='' && $_COOKIE['admin']=='') {
             require 'blocks/header.php';
-        } else if ($_COOKIE['log']!='') {
+        } else if ($_COOKIE['user']!='') {
             require 'blocks/header.php';
         } else if ($_COOKIE['admin']!='') {
             require 'blocks/admin.php';
         }
  ?>  
- 
+
  <div class="container mt-5">
     <div class="row">
         <div class="col-md-8 mb-3">
@@ -29,7 +29,7 @@
                 <input type="surname" name="SurName" id="SurName" class="form-control">
 
                 <label for="Email">Email</label>
-                <input type="email" name="Email" id="Email" class="form-control">
+                <input type="email" name="Email" id="Email" class="form-control" value="<?php echo $_COOKIE['user'] ?>">
 
                 <label for="datetime">Дата</label>
                 <input type="datetime-local" name="DateTime" id="DateTime" class="form-control">
@@ -71,7 +71,7 @@
                 if (data == true) {
                 $('#booking_restoran').text('Все готово');
                 $('#errorBlock').hide();
-                document.location.reload(true);
+                document.location.replace('auth.php');
                 } else {
                     $('#errorBlock').show();
                     $('#errorBlock').text(data);

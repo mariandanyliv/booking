@@ -16,5 +16,4 @@
     $query = $pdo->prepare($sql);
     $query->execute(['nameRestoran' => $nameRestoran]);
     echo true;
-
 ?>
