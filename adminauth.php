@@ -5,7 +5,7 @@
         $website_title = "Авторизація на сайті";
         require 'blocks/head.php';
     ?>
-</head>
+      
 <body>
 <?php require 'blocks/admin.php' ?>
 
@@ -36,6 +36,9 @@
                     <h4>Додавання ресторану</h4>
                 <label for="login">Назва ресторану</label>
                 <input type="text" name="restoranName" id="restoranName" class="form-control">
+
+                <label for="email">Email ресторану</label>
+                <input type="text" name="email" id="email" class="form-control">
 
                 <label for="img">Фото ресторану</label>
                 <input type="text" name="img" id="img" class="form-control">
@@ -80,6 +83,9 @@
                 <label for="NAMERestoran">Назва ресторану</label>
                 <input type="text" name="NAMERestoran" id="NAMERestoran" class="form-control">
 
+                <label for="Email">Email ресторану</label>
+                <input type="text" name="Email" id="Email" class="form-control">
+
                 <label for="imgg">Фото ресторану</label>
                 <input type="text" name="imgg" id="imgg" class="form-control">
                 
@@ -102,8 +108,7 @@
         </div>
     </div>
 </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
             $('#exit_btn').click(function() {
             $.ajax({
@@ -143,6 +148,7 @@
 
             $('#add_restoran').click(function() {
             var restoranName = $('#restoranName').val();
+            var email = $('#email').val();
             var img = $('#img').val();
             var score = $('#score').val();
             
@@ -150,7 +156,7 @@
                 url: 'ajax/addrestoran.php',
                 type: 'POST',
                 cache: false,
-                data: {'restoranName': restoranName, 'img': img, 'score': score},
+                data: {'restoranName': restoranName,'email': email, 'img': img, 'score': score},
                 dataType: 'html',
                 success: function(data) {
                     if (data == true) {

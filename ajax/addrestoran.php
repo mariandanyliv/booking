@@ -1,5 +1,6 @@
 <?php
     $restoranName = trim(filter_var($_POST['restoranName'], FILTER_SANITIZE_STRING));
+    $email = trim(filter_var($_POST['email'], FILTER_SANITIZE_EMAIL));
     $img = trim(filter_var($_POST['img'], FILTER_SANITIZE_STRING));
     $score = $_POST['score'];
 
@@ -19,8 +20,8 @@
 
     require_once '../mysql_connect.php';
 
-    $sql = 'INSERT INTO restoran(NameRestoran, img, score) VALUES(?,?,?)';
+    $sql = 'INSERT INTO restoran(NameRestoran, email, img, score) VALUES(?,?,?,?)';
     $query = $pdo->prepare($sql);
-    $query->execute([$restoranName, $img, $score]);
+    $query->execute([$restoranName, $email, $img, $score]);
     echo true;
 ?>

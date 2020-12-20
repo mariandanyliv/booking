@@ -8,9 +8,9 @@
 </head>
 <body>
     <?php 
-        if ($_COOKIE['log']=='' && $_COOKIE['admin']=='') {
+        if ($_COOKIE['user']=='' && $_COOKIE['admin']=='') {
             require 'blocks/header.php';
-        } else if ($_COOKIE['log']!='') {
+        } else if ($_COOKIE['user']!='') {
             require 'blocks/header.php';
         } else if ($_COOKIE['admin']!='') {
             require 'blocks/admin.php';

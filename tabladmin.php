@@ -1,6 +1,8 @@
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../css/admin.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
 </head>
 <script>
     $(document).ready(function(){
@@ -74,19 +76,22 @@
                                 <th>#</th>
                                 <th>restoranid</th>
                                 <th>Назва ресторану</th>
+                                <th>Email ресторану</th>
                                 <th>рейтинг</th>
                             </tr>
                             </thead>
                             <tbody>
                             <?php
-                            $query = $pdo->query('SELECT * FROM restoran ORDER BY restoranid DESC');
+                            $query = $pdo->query('SELECT * FROM `restoran` ORDER BY restoranid DESC');
                             $i = 1;
                             while($row = $query->fetch(PDO::FETCH_OBJ)){
                                 echo '<tr>
                                 <td>' . $i . '</td>
                                 <td>' . $row->restoranid . '</td>
                                 <td>' . $row->nameRestoran . '</td>
-                                <td>' . $row->score . '</td>';
+                                <td>' . $row->email . '</td>
+                                <td>' . $row->score . '</td>
+                                </tr>';
                                 $i++;
                             }
                             ?>
