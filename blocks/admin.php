@@ -6,5 +6,6 @@
   <a class="btn btn-outline-primary mb-2" href="/reg.php">Реєстрація</a>
   <?php else: ?>
   <a class="btn btn-outline-primary mr-2 mb-2" href="./adminauth.php">Адмін панель</a>
+  <button type="button" class="btn btn-danger mb-2" id="exit_btn">Вийти</button>
   <?php endif; ?>
 </div>

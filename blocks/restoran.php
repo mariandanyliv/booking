@@ -33,7 +33,7 @@
                     <div class="col-4">
                     <div class="portfolio-item">
                         <div class="portfolio-item__img">
-                            <img src="' . $rowing->img . '"alt="Split">
+                            <img src="' . $rowing->img . '"alt="photo restoran">
                         </div>
                         <div class="portfolio-item__title">
                             <a href="#">' . $rowing->nameRestoran . '</a>
@@ -50,7 +50,7 @@
                     <div class="col-4">
                     <div class="portfolio-item">
                         <div class="portfolio-item__img">
-                            <img src="' . $rowing->img . '"alt="Split">
+                            <img src="' . $rowing->img . '"alt="photo restoran">
                         </div>
                         <div class="portfolio-item__title">
                             <a href="#">' . $rowing->nameRestoran . '</a>

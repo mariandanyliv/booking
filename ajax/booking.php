@@ -17,9 +17,9 @@
                 $error = 'Введість коректний email';
                     else if (strlen($DateTime) <= 3) 
                     $error = 'Введість коректний email';
-                        else if (strlen($NumberTable) <= 0) 
+                        else if (strlen($NumberTable) <= 0 && strlen($NumberTable) > 12) 
                         $error = 'Введість коректний email';
-                            else if (strlen($NumberSeats) <= 0) 
+                            else if (strlen($NumberSeats) <= 0 && strlen($NumberSeats) >= 10) 
                             $error = 'Введість коректний email';
 
     if($error != '') {

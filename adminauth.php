@@ -25,7 +25,7 @@
 
                 <div class="aletr alert-danger mt-3" id="errorBlock"></div>
 
-                <button type="button" id="adminauth_user" class="btn btn-success mt-5">Ввійти</button>
+                <button type="button" id="adminauth_user" class="btn btn-success mt-1">Ввійти</button>
             </form>
             <?php
                 else:
@@ -47,34 +47,34 @@
 
                 <div class="aletr alert-danger mt-3" id="errorBlock"></div>
 
-                <button type="button" id="add_restoran" class="btn btn-success mt-5">Додати</button>
+                <button type="button" id="add_restoran" class="btn btn-success mt-1">Додати</button>
 
             </form>
 
             <form action="" method="post">
-                <h4>Видалення ресторану</h4>
+                <h4 class="mt-5">Видалення ресторану</h4>
                 <label for="nameRestoran">Введіть назву ресторану</label>
                 <input type="text" name="nameRestoran" id="nameRestoran" class="form-control">
 
                 <div class="aletr alert-danger mt-3" id="errorBlocks"></div>
 
-                <button type="button" id="delete_restoran" class="btn btn-success mt-5">Видалити ресторан</button>
+                <button type="button" id="delete_restoran" class="btn btn-success mt-1">Видалити ресторан</button>
 
             </form>
 
             <form action="" method="post">
-                <h4>Видалення користувача</h4>
+                <h4 class="mt-5">Видалення користувача</h4>
                 <label for="login">Введіть логін користувача</label>
                 <input type="text" name="login" id="login" class="form-control">
 
                 <div class="aletr alert-danger mt-3" id="errorBlockss"></div>
 
-                <button type="button" id="delete_user" class="btn btn-success mt-5">Видалити користувача</button>
+                <button type="button" id="delete_user" class="btn btn-success mt-1">Видалити користувача</button>
 
             </form>
 
             <form action="" method="post">
-                <h4>Редагування ресторану</h4>
+                <h4 class="mt-5">Редагування ресторану</h4>
 
                 <label for="restoranid">ID ресторану</label>
                 <input type="number" name="restoranid" id="restoranid" class="form-control">
@@ -93,11 +93,11 @@
 
                 <div class="aletr alert-danger mt-3" id="errorBlocksss"></div>
 
-                <button type="button" id="upd_restoran" class="btn btn-success mt-5">Редагувати</button>
+                <button type="button" id="upd_restoran" class="btn btn-success mt-1">Редагувати</button>
 
             </form>
                 <form action="" method="post">
-                <h4>Скасувати замовлення</h4>
+                <h4 class="mt-5">Скасувати замовлення</h4>
                     <label for="BookingID">Введіть номер замовлення, яке хочете скасувати</label>
                     <input type="number" name="BookingID" id="BookingID" class="form-control">
 
@@ -106,10 +106,11 @@
 
                  </form>           
 
+                 
                     <?php  require 'tabladmin.php' ?>
-
-            <button type="button" class="btn btn-danger" id="exit_btn">Вийти</button>
             
+                    <a class="btn btn-success mb-5" href="report.php">Звіт по кількості замовлень</a>
+
             <?php
                 endif;
             ?>
