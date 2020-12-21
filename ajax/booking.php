@@ -16,11 +16,11 @@
                 else if (strlen($Email) <= 3) 
                 $error = 'Введість коректний email';
                     else if (strlen($DateTime) <= 3) 
-                    $error = 'Введість коректний email';
+                    $error = 'Введість коректний Введіть дату і час бронювання';
                         else if (strlen($NumberTable) <= 0 && strlen($NumberTable) > 12) 
-                        $error = 'Введість коректний email';
+                        $error = 'Введість коректний номер столика';
                             else if (strlen($NumberSeats) <= 0 && strlen($NumberSeats) >= 10) 
-                            $error = 'Введість коректний email';
+                            $error = 'Введість коректну кількість людей';
 
     if($error != '') {
         echo $error;

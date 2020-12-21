@@ -15,8 +15,10 @@
         } else if ($_COOKIE['admin']!='') {
             require 'blocks/admin.php';
         }
- ?>   
-    <?php require 'blocks/restoran.php'; ?>
+ ?>  
+    <div class="row" style="justify-content: center">
+        <?php require 'blocks/restoran.php'; ?>
+    </div> 
     <?php require 'blocks/footer.php'; ?>
 </body>
 </html>

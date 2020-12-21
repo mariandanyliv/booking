@@ -12,7 +12,7 @@
         Про нас
       </div>
         <div class="subtitle mb-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquid placeat eius quas! Enim similique sequi assumenda non fugiat aperiam iure nobis quia? Quidem optio voluptatibus mollitia laborum dolor debitis.
+            Онла́йн-бронюва́ння - бронювання через Інтернет, в інтерактивному режимі. Термін застосовується по відношенню до бронювання номерів в готелях, квитків (авіа, залізничних, автобусних тощо), місць в ресторанах і театрах, прокату автомобілів тощо.
         </div>    
         <?php
             $user = 'root';
@@ -29,40 +29,38 @@
             while($rowing = $query->fetch(PDO::FETCH_OBJ)) {
                 if ($_COOKIE['user']=='')
                 {
-                    echo '<div class="row">
-                    <div class="col-4">
-                    <div class="portfolio-item">
-                        <div class="portfolio-item__img">
-                            <img src="' . $rowing->img . '"alt="photo restoran">
-                        </div>
-                        <div class="portfolio-item__title">
-                            <a href="#">' . $rowing->nameRestoran . '</a>
-                        </div>
-                        <div class="portfolio-item__title">
-                        <a href="#">Рейтинг:' . $rowing->score . '</a>
-                    </div>
-                       
-                       <a type="button" id="booking" class="btn btn-success mt-2" href="../auth.php">Забронювати</a>
-                    </div>
-                </div>';
+                    echo '
+                            <div class="col-4">
+                                <div class="portfolio-item">
+                                    <div class="portfolio-item__img">
+                                        <img src="' . $rowing->img . '"alt="photo restoran">
+                                    </div>
+                                <div class="portfolio-item__title">
+                                        <a href="#">' . $rowing->nameRestoran . '</a>
+                                </div>
+                                    <div class="portfolio-item__title">
+                                        <a href="#">Рейтинг:' . $rowing->score . '</a>
+                                    </div>
+                                <a type="button" id="booking" class="btn btn-success mt-2" href="../auth.php">Забронювати</a>
+                                </div>
+                            </div>';
                 } else {
-                    echo '<div class="row">
-                    <div class="col-4">
-                    <div class="portfolio-item">
-                        <div class="portfolio-item__img">
-                            <img src="' . $rowing->img . '"alt="photo restoran">
-                        </div>
-                        <div class="portfolio-item__title">
-                            <a href="#">' . $rowing->nameRestoran . '</a>
-                        </div>
-                        <div class="portfolio-item__title">
-                        <a href="#">Рейтинг:' . $rowing->score . '</a>
-                    </div>
-                       
-                       <a type="button" id="booking" class="btn btn-success mt-2" href="../formbooking.php">Забронювати</a>
-                    </div>
-                </div>';
-                }
+                    echo '
+                            <div class="col-4">
+                                <div class="portfolio-item">
+                                    <div class="portfolio-item__img">
+                                        <img src="' . $rowing->img . '"alt="photo restoran">
+                                    </div>
+                                <div class="portfolio-item__title">
+                                    <a href="#">' . $rowing->nameRestoran . '</a>
+                                </div>
+                                    <div class="portfolio-item__title">
+                                        <a href="#">Рейтинг:' . $rowing->score . '</a>
+                                    </div>
+                                    <a type="button" id="booking" class="btn btn-success mt-2" href="../formbooking.php">Забронювати</a>
+                                    </div>
+                                </div>';
+            }
            
         }
         ?>

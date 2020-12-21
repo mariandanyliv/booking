@@ -42,7 +42,7 @@
 
                 <div class="aletr alert-danger mt-3" id="errorBlock"></div>
 
-                <button type="button" id="booking_restoran" class="btn btn-success mt-5">Забронювати</button>
+                <button type="button" id="booking_restorans" class="btn btn-success mt-5">Забронювати</button>
             </form>
         </div>
     </div>
@@ -53,7 +53,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
-    $('#booking_restoran').click(function() {
+    $('#booking_restorans').click(function() {
         var UserName = $('#UserName').val();
         var SurName = $('#SurName').val();
         var Email = $('#Email').val();
@@ -69,7 +69,7 @@
             dataType: 'html',
             success: function(data) {
                 if (data == true) {
-                $('#booking_restoran').text('Все готово');
+                $('#booking_restorans').text('Все готово');
                 $('#errorBlock').hide();
                 document.location.replace('auth.php');
                 } else {

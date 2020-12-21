@@ -22,7 +22,7 @@
 
     require_once '../mysql_connect.php';
 
-    $sql = 'UPDATE restoran SET nameRestoran = (?), img = (?), score = (?) WHERE restoran.restoranid = (?)';;
+    $sql = 'UPDATE restoran SET nameRestoran = (?), img = (?), score = (?) WHERE restoran.restoranid = (?)';
     $query = $pdo->prepare($sql);
     $query->execute([$NAMERestoran, $imgg, $scoree, $restoranid]);
     echo true;
